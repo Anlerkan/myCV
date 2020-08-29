@@ -1,0 +1,163 @@
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+\colorlet{tagline}{VividPurple}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\begin{document}
+\name{Anılerkan Madenci}
+\tagline{Developer}
+
+\photoR{2.5cm}{}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{anlmddnci@gmail.com}
+%   \phone{000-00-0000}
+  \location{Istanbul,TR}
+  \twitter{@Anlerkan_}
+  \linkedin{anlerkan}
+  \github{Anlerkan} % I'm just making this up though.
+
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Volunteer Intern}{IT Valley-Incubation Center}{January 2020 -- April 2020}{Gebze, TR}
+\begin{itemize}
+\item I worked on a project which is using natural language processing and image processing.
+\end{itemize}
+\cvevent{Freelance Web Developer}{Remote}{January 2018 -- Ongoing}{Remote}
+
+
+\divider
+
+
+
+\cvsection{A Day of My Life}
+
+
+\wheelchart{1.5cm}{0.5cm}{%
+  6/8em/accent!30/{Sleeping \& dreaming about work},
+  3/8em/accent!40/Business development for myself,
+  8/8em/accent!60/Daytime job,
+  2/10em/accent/Sports and relaxation,
+  3/6em/accent!20/Spending time with family \& friends
+}
+
+
+
+\cvsection{Projects}
+
+\cvevent{Entegram}{Integration for e-commerce sites  }{}{}
+\begin{itemize}
+\item 2020-Ongoing
+\end{itemize}
+
+\divider
+
+
+\medskip
+\switchcolumn
+
+\cvsection{More About Me}
+\begin{quote}
+spotify:playlist:0AkUQ3LQiMyeswAUO8rYUl
+\end{quote}
+
+
+
+\cvsection{Strengths}
+
+\cvtag{Hard-working }
+\cvtag{Persuasive}\\
+\cvtag{Creativity}
+\cvtag{Motivator \& Team Player}
+
+\divider\smallskip
+\cvsection{Skills}
+\cvskill{Python}{4}
+\cvskill{C\#}{4}
+\cvskill{SQL}{3}
+\cvskill{Dart \& Flutter}{3}
+\cvskill{HTML5/CSS3}{4}
+\cvskill{Javascript}{2}
+\cvskill{C/C++}{2}
+
+\cvsection{Languages}
+\cvskill{Turkish}{5}
+\cvskill{English}{3}
+% \divider
+
+
+
+
+\cvsection{Education}
+
+\cvevent{B.S.\ in Computer Engineering | 3/4}{Istanbul Gelisim University}{Sept 2018 -- Ongoing}{}
+\cvsection{Courses / Certificates}
+
+\cvevent{JAVA SE}{ISMEK}{2019}{}
+\cvevent{Cyber Security (Basics of Network Security)}{ISMEK}{2019}{}
+\cvevent{Oracle Database}{ISMEK}{2019}{}
+\cvevent{Python}{BUSIBER}{2019}{}
+
+
+
+
+\end{paracol}
+
+\end{document}
